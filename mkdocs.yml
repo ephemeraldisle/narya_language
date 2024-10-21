@@ -1,0 +1,107 @@
+site_name: Narya Programming Language
+site_description: Documentation for the Narya programming language
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # Custom theme options
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: fontawesome/solid/ring
+  language: en
+  favicon: fontawesome/solid/ring
+  features:
+    - navigation.instant
+
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Language Reference:
+    - Overview: language-reference/overview.md
+    - Syntax:
+      - Basic Syntax: language-reference/syntax/basic-syntax.md
+      - Types: language-reference/syntax/types.md
+      - Variables: language-reference/syntax/variables.md
+      - Functions: language-reference/syntax/functions.md
+      - Control Flow: language-reference/syntax/control-flow.md
+      - Collections: language-reference/syntax/collections.md
+      - Error Handling: language-reference/syntax/error-handling.md
+    - Advanced Concepts:
+      - Memory Management: language-reference/advanced-concepts/memory-management.md
+      - Traits: language-reference/advanced-concepts/traits.md
+      - Generics: language-reference/advanced-concepts/generics.md
+      - Operator Overloading: language-reference/advanced-concepts/operator-overloading.md
+    - Grammar: language-reference/grammar.md
+  - Standard Library:
+    - Overview: standard-library/overview.md
+    - Core Types: standard-library/core-types.md
+    - Common Functions: standard-library/common-functions.md
+  - FAQ: faq.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      pygments_lang_class: true
+      extend_pygments_lang:
+        - name: narya
+          lang: narya
+          options:
+            python_path: .
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append(".")
+
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ephemeraldisle/
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+# Options for serving locally
+dev_addr: '127.0.0.1:8000'
