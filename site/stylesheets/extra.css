@@ -1,0 +1,145 @@
+/* Light mode colors */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ff8933;
+  --md-primary-fg-color--light: #ffa666;
+  --md-primary-fg-color--dark: #e67300;
+  --md-accent-fg-color: #bf2b17; /* Changed to gold */
+  --md-typeset-a-color: #ff8933; /* Unvisited links color */
+  --md-typeset-a-color--visited: #e40066; /* Visited links color */
+  
+  --md-default-bg-color: #c9c8bc;
+  --md-default-fg-color: #121212;
+  
+  /* Gold accents for special elements */
+  --md-code-bg-color: #fff6d6;
+  --md-code-fg-color: #121212;
+}
+
+/* Dark mode colors */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #ff8933;
+  --md-primary-fg-color--light: #ffa666;
+  --md-primary-fg-color--dark: #e67300;
+  --md-accent-fg-color: #f0b35e; /* Changed to gold */
+  --md-typeset-a-color: #ff8933; /* Unvisited links color */
+  --md-typeset-a-color--visited: #e40066; /* Visited links color */
+  
+  --md-default-bg-color: #211c1a;
+  --md-default-fg-color: #f5ffe8;
+  
+  /* Gold accents for special elements */
+  --md-code-bg-color: #121212;
+  --md-code-fg-color: #f0b35e;
+}
+
+/* Custom styles */
+/* Gradient for the header */
+.md-header {
+  background: linear-gradient(135deg,#bf2b17 0%, #c24311 15%, #ba2d20 50%, #bf2b17 80%, #4f1007 100%);
+}
+
+/* Ensure text is readable on the gradient background */
+.md-header__topic .md-ellipsis {
+  color: #f0b35e;
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 5px #c8995245;
+  transition: color 0.25s;
+}
+
+.md-header__topic .md-ellipsis:hover{
+  color: #ffc87a;
+}
+
+.md-header__button.md-logo {
+  color: #f0b35e;
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 2px #c8995245;
+  stroke: #c8995245;
+  stroke-width: 20px;
+  transition: color 0.25s;
+  
+}
+/* Style for the navigation tabs to complement the header */
+.md-tabs {
+  background: linear-gradient(135deg, #e67300 0%, #d99b05 100%);
+}
+
+/* Adjust tab text color for better visibility */
+.md-tabs__link {
+  color: #f5ffe8; /* Light text color for contrast */
+}
+
+.md-tabs__link--active {
+  color: #ffffff; /* White text for active tab */
+}
+
+/* Optional: Add a subtle shadow to the header for depth */
+.md-header {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+
+.md-nav__item .md-nav__link--active {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset a {
+  color: var(--md-typeset-a-color);
+}
+
+.md-typeset a:visited {
+  color: var(--md-typeset-a-color--visited);
+}
+
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+}
+
+/* Add a subtle gold border to blockquotes */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-accent-fg-color);
+}
+
+/* Style buttons with gold */
+.md-typeset .md-button {
+  background-color: var(--md-accent-fg-color);
+  color: #121212;
+  border: none;
+}
+
+.md-typeset .md-button:hover {
+  background-color: var(--md-primary-fg-color);
+  color: #f5ffe8;
+}
+
+
+.md-header__button.md-logo:hover{
+  color: #ffc87a;
+  opacity: 1;
+}
+
+.md-footer{
+  visibility: hidden;
+}
+
+.language-narya .highlight {
+  /* Add your desired styles here */
+  background-color: #0026ff;
+  color: #27ff2e;
+}
+.language-narya .hljs-keyword {
+  color: #ff8933;  /* Yofur fiery orange */
+}
+
+.language-narya .hljs-type {
+  color: #edaa06;  /* Your gold color */
+}
+
+.language-narya .hljs-string {
+  color: #e40066;  /* Your magenta color */
+}
+
+.language-narya .hljs-comment {
+  color: #808080;  /* A muted gray for comments */
+}

@@ -1,4 +1,4 @@
-site_name: Narya Programming Language
+site_name: "Narya - Programming Language"
 site_description: Documentation for the Narya programming language
 theme:
   name: material
@@ -22,14 +22,15 @@ theme:
 
   # Custom theme options
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Fira Sans
+    code: Fira Mono
   icon:
     logo: fontawesome/solid/ring
   language: en
   favicon: fontawesome/solid/ring
   features:
     - navigation.instant
+    - content.code.copy
 
 
 nav:
@@ -51,6 +52,7 @@ nav:
       - Generics: language-reference/advanced-concepts/generics.md
       - Operator Overloading: language-reference/advanced-concepts/operator-overloading.md
     - Grammar: language-reference/grammar.md
+    - Style Guide: language-reference/style-guide.md
   - Standard Library:
     - Overview: standard-library/overview.md
     - Core Types: standard-library/core-types.md
@@ -59,13 +61,12 @@ nav:
 
 markdown_extensions:
   - pymdownx.highlight:
+      anchor_linenums: false 
       use_pygments: true
       pygments_lang_class: true
       extend_pygments_lang:
         - name: narya
-          lang: narya
-          options:
-            python_path: .
+          lang: narya 
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
@@ -80,17 +81,8 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji 
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          setup_commands:
-            - import sys
-            - sys.path.append(".")
-
-
 
 extra:
   social:

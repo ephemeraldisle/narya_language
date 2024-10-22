@@ -1,0 +1,16 @@
+
+# Core documentation tools
+mkdocs==1.5.3
+mkdocs-material==9.5.3
+pymdown-extensions==10.7
+
+# Syntax highlighting
+pygments==2.18.0
+
+# Our custom lexer
+
+git+https://github.com/ephemeraldisle/narya-pygments.git@main
+
+# Optional but useful extensions
+mkdocs-git-revision-date-localized-plugin==1.2.2
+mkdocs-minify-plugin==0.8.0
