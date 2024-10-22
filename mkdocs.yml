@@ -31,6 +31,13 @@ theme:
   features:
     - navigation.instant
     - content.code.copy
+    - content.tabs.link
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - content.code.annotate
+
 
 
 nav:
@@ -76,7 +83,19 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
   - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.tabbed
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji 
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
