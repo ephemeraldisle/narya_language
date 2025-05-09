@@ -17,18 +17,19 @@ Good code should be easy to write. Every decision that has gone into creating **
 ```narya
 group Person(text Name, num Age)
     public text Greeting
-        return 'Greetings! I am .Name, .Age years young.'
+        return 'Greetings! I am .Name, .Age years young!'
 
 do
-    *List(Person) people = Person("Aragorn", 87), Person("Galadriel", 8372), Person("Olórin", 58000)
+    *List(Person) people = Person("Aragorn", 87), Person("Galadriel", 8372),
+                           Person("Olórin", 58000)
     for person in people
         print person.Greeting
 
 /*
 Output:
-Greetings! I am Aragorn, 87 years young.
-Greetings! I am Galadriel, 8372 years young.
-Greetings! I am Olórin, 58000 years young.
+Greetings! I am Aragorn, 87 years young!
+Greetings! I am Galadriel, 8372 years young!
+Greetings! I am Olórin, 58000 years young!
 */
 ```
 
@@ -38,8 +39,8 @@ Greetings! I am Olórin, 58000 years young.
 
 ```narya
 // Collections follow one consistent pattern
-List(num) numbers = 1, 2, 3
-Dictionary(text = num) ages = "Alice" = 25, "Bob" = 30
+List(int) numbers = 1, 2, 3
+Dictionary(string = float) distanceInFeet = ("ranga" = 3.16667, "lár" = 15833.33)
 Set(char) vowels = 'a', 'e', 'i', 'o', 'u'
 ```
 
@@ -48,16 +49,19 @@ Set(char) vowels = 'a', 'e', 'i', 'o', 'u'
     Common programming tasks shouldn't require external libraries. Narya includes powerful built-in features for:
     
     - 🎯 Memory management at *your* level of comfort
-    - 🔄 Comprehensive string interpolation
     - 🛡️ Built-in error handling
+    - 🔄 Comprehensive string interpolation
     - 🧩 Rich collection types
     - 🔗 Trait-based composition
-    - 🎨 Metaprogram to your wildest dreams
+    - ✨ Metaprogram to your wildest dreams
 
 ## Why Narya?
 
 ### 🌟 Inspiration
-After a night of frustration with inconsistencies in both Python and C#, **Narya** was born with the audacious goal to truly make "one programming language to rule them all." Unfortunately, Ring is already a programming language, and **Ash Nazg Durbatulûk** just doesn't quite roll off the tongue. So we look instead to the Ring of Fire, Narya. Just as it was crafted to inspire others to resist tyranny and despair, **Narya** is designed to resist the tyranny of complexity and the despair of inconsistent design. Naturally, of course, it is and will always be free and open source, forever. *Hopefully I'll never need some help keeping the Tolkien estate off my back.* 😇
+After a night of frustration with inconsistencies in both Python and C#, **Narya** was born with the audacious goal to truly make "one programming language to rule them all." Unfortunately, Ring is already a programming language, and any combination of **Ash Nazg Durbatulûk** ("one ring to rule them all") just doesn't quite roll off the tongue. So instead, sticking with actually named rings of power, we look instead to the Ring of Fire, Narya, which has the best name (sorry Nenya and Vilya, your time will come). Just as it was crafted to inspire others to resist tyranny and despair, **Narya** is designed to resist the tyranny of complexity and the despair of inconsistent design. Naturally, of course, it is and will always be free and open source, forever. *Hopefully I'll never need some help keeping the Tolkien estate off my back.* 😇
+
+### 🙌 Developer Ergonomics
+Your hands are important. Why should we continue to sacrifice them in the name of code that's easier for computers to parse like it’s still 1972 or 1987? As someone with a history of various wrist and finger repetitive strain injuries, I view every extra keypress, every extra held modifier, or layer-shifting key as one more tiny dagger into your hands' longevity. Narya aims to be as friendly to type as possible by using a limited set of symbols and reducing unnecessary syntactic noise, making it both more comfortable to write and more aesthetically pleasing.
 
 ### 🎯 Design Philosophy
 Unlike languages that grow organically over decades, Narya is purposefully crafted with a clear vision. Every feature must pass the "Ring Test":
@@ -68,23 +72,12 @@ Unlike languages that grow organically over decades, Narya is purposefully craft
 
 ### 💎 Key Features
 
-=== "Tab 1"
-    Markdown **content**.
-
-    Multiple paragraphs.
-
-=== "Tab 2"
-    More Markdown **content**.
-
-    - list item a
-    - list item b
-
 === "Memory Management"
     The innovative Ring system provides three levels of memory management:
     ```narya
     inner int x = 5        // Automatic scope-based (default)
-    outer Config cfg = {}  // Reference counted
-    core Resource r = {}   // Manual management
+    outer Config configuration = new  // Reference counted
+    core Resource resource = new  // Manual management
     ```
 
 === "String Interpolation"
@@ -98,7 +91,7 @@ Unlike languages that grow organically over decades, Narya is purposefully craft
 === "Error Handling"
     Built-in error handling without exceptions:
     ```narya
-    int? result = riskyOperation()
+    int? result = RiskyOperation
     if result is Error
         // Handle error
     else
@@ -178,19 +171,6 @@ Jump into Narya with our [Getting Started Guide](getting-started.md) or explore 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Basic Syntax
 
 ## Comments
@@ -219,7 +199,7 @@ multi-line comment
 Here's a simple example of Narya code:
 
 ```narya
-group Main
+group Main  
     obj Person
         public *num Age
         private text Name
@@ -228,7 +208,7 @@ group Main
             Age = age
             Name = name
         
-        public act Greeting
+        public action Greeting
             print 'Hi, my name is .Name and I am .Age years old!'
 
     do

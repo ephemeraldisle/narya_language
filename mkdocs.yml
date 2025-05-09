@@ -80,22 +80,23 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
-  - pymdownx.mark
   - pymdownx.tilde
   - def_list
   - attr_list
   - tables
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
-  - pymdownx.tabbed
   - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji 
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

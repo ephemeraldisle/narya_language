@@ -2,7 +2,7 @@
   /* Core theme colors - brighter versions */
   --narya-red: #ff2b48;
   /* brightened narya red */
-  --firey-orange: #ff3f3f;
+  --firey-orange: #ff5c3f;
   /* brightened firey orange */
   --bright-gold: #c5a572;
   /* more vibrant gold */
@@ -170,12 +170,6 @@
 }
 
 .highlight pre {
-  white-space: pre-wrap !important;
-  /* Allow wrapping */
-  word-wrap: break-word !important;
-  /* Break long words if needed */
-  word-break: break-all;
-  /* More aggressive breaking if needed */
   max-width: 100%;
   /* Ensure it doesn't overflow container */
   padding: 1em;
@@ -201,6 +195,9 @@
 .highlight .nf  { color: var(--forest-green) !important; }  /* Functions */
 .highlight .nv  { color: var(--vilya-white) !important; } /* Variables */
 .highlight .no  { color: var(--narya-red) !important; }     /* Constants */
+.highlight .nv-Interpolated { color: #e5dbcf !important;}
+
+.se { color: var(--firey-orange) !important;}
 
 /* Literals */
 .highlight .s,
@@ -211,9 +208,56 @@
 .highlight .si { color: var(--mithrilium-silver) !important; }
 
 /* Operators and punctuation */
-.highlight .o   { color: var(--bright-gold) !important; }   /* Operators pop more */
+.highlight .o   { color: var(--shadow-grey) !important; }   /* Operators pop more */
 .highlight .p   { color: var(--shadow-grey) !important; }   /* Punctuation recedes */
 
 /* Comments */
 .highlight .c1,
 .highlight .cm  { color: #ac5eb6 !important; }             /* kept same */
+
+.highlight .go {
+  color: #98c379; /* A softer green color */
+  font-style: normal; /* Remove italics */
+  background-color: rgba(152, 195, 121, 0.05); /* Subtle background */
+}
+
+.md-grid {
+  max-width: 90% !important;
+  gap: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.md-sidebar {
+  height: 100vh !important;
+  
+  padding: 1.2rem 0.5rem;
+}
+
+.md-typeset code{
+  font-size:calc(8px + 0.325vw);
+}
+
+.md-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.md-content {
+  max-width: 65%;
+}
+
+@media screen and (min-width: 60em) {
+  .md-sidebar:not([hidden]){
+    display: flex;
+  }
+  
+}
+
+@media screen and (max-width: 76.2344em){
+  .md-content {
+    max-width: 90% !important;
+  }
+}

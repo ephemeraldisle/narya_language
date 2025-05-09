@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../narya-pygments"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "narya_documentation_mkdocs"
+	}
+}
