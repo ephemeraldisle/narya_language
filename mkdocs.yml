@@ -1,5 +1,6 @@
 site_name: "Narya - Programming Language"
 site_description: Documentation for the Narya programming language
+site_url: https://ephemeraldisle.github.io/narya_language
 theme:
   name: material
   palette:

@@ -24,3 +24,6 @@ try:
     print(highlight(code, narya_lexer, HtmlFormatter()))
 except ClassNotFound:
     print("\nNarya lexer not found!")
+    
+    
+    
